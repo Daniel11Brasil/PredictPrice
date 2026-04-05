@@ -1,3 +1,8 @@
+import requests
+url = "https://economia.awesomeapi.com.br/last/USD-BRL"
+res = requests.get(url)
+print(f"Conexão OK! O dólar agora está: R$ {res.json()['USDBRL']['bid']}")
+
 # Preços Fixos
 DOLAR_COTADO = 5.16
 PRECO_IOF_CARTOES = 0.35
